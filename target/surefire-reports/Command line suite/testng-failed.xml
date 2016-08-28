@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="com.a.b.SeleniumGridTest"/>
+      <class name="com.gspann.FlipcartTest"/>
+      <class name="com.gspann.IrctcTest"/>
+    </classes>
+  </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.gspann.FlipcartTest">
+        <methods>
+          <include name="flipDetails"/>
+        </methods>
+      </class> <!-- com.gspann.FlipcartTest -->
+      <class name="com.gspann.IrctcTest">
+        <methods>
+          <include name="testDomesticTravel"/>
+        </methods>
+      </class> <!-- com.gspann.IrctcTest -->
+      <class name="com.a.b.SeleniumGridTest">
+        <methods>
+          <include name="t1"/>
+        </methods>
+      </class> <!-- com.a.b.SeleniumGridTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

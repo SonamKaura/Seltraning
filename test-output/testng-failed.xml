@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.gspann.FlipcartTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test1">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.gspann.FlipcartTest"/>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.gspann.FlipcartTest">
+        <methods>
+          <include name="flipDetails"/>
+          <include name="startup"/>
+          <include name="startup"/>
+        </methods>
+      </class> <!-- com.gspann.FlipcartTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.gspann.FlipcartTest">
+        <methods>
+          <include name="flipDetails"/>
+          <include name="startup"/>
+          <include name="startup"/>
+        </methods>
+      </class> <!-- com.gspann.FlipcartTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
