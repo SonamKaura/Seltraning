@@ -53,6 +53,7 @@ public class FlipcartTest {
 		scenario.random();
 		Thread.sleep(4000);
 		String textremoved=scenario.checkout();
+		System.out.println("hello");
 		Assert.assertEquals(textremoved, "The item Arrow Sport Slim Fit Men's Beige Trousers has been deleted from your cart");
 		//Assert.assertEquals(check, "message not matching");
 	}
